@@ -1,0 +1,31 @@
+18 january 2023
+COPY THE CODE FROM THE 5TH LINE 
+Today remove the code from 43 to 51
+
+class Solution
+{
+    public:
+    int findFirstNode(Node* head){
+         Node*slow=head;
+        Node*fast=head;
+        while(fast->next && fast->next->next){
+            slow=slow->next;
+            fast=fast->next->next;
+            if(fast==slow) break;
+        }
+        if(fast!=slow) 
+            return -1;
+        slow=head;
+        while(slow!=fast){
+            slow=slow->next;
+            fast=fast->next;
+        }
+       return slow->data;
+    }
+};
+
+
+
+
+
+BY KUSHAL347
