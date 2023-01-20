@@ -1,0 +1,46 @@
+19 january 2023
+COPY THE CODE FROM THE 8TH LINE 
+Today remove the code from 08 to 15
+
+
+
+
+class Solution
+{
+  public:
+  int maxWeightCell(int N, std::vector<int> Edge) {
+    int weight[N]; // array to store weight of each cell
+    for (int i = 0; i < N; i++) {
+        weight[i] = 0;
+    }
+
+    for (int i = 0; i < N; i++) {
+        if (Edge[i] != -1) {
+            weight[Edge[i]] += (i + 1);
+        }
+    }
+
+    int maxWeight = 0, maxWeightCell = 0;
+    for (int i = 0; i < N; i++) {
+        if (weight[i] > maxWeight) {
+            maxWeight = weight[i];
+            maxWeightCell = i;
+        }
+    }
+
+    return maxWeightCell;
+}
+
+int main() {
+    int N = 4;
+    std::vector<int> Edge = {2, 0, -1, 2};
+    std::cout << "Maximum weight cell: " << maxWeightCell(N, Edge) << std::endl;
+    return 0;
+}
+};
+
+
+
+
+
+BYKUSHAL347
