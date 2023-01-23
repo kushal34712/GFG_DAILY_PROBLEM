@@ -1,0 +1,34 @@
+23 january 2023
+
+
+COPY THE CODE FROM THE 14TH LINE 
+
+
+Today remove the code from 7 to 14
+
+then ENTER AND PASTE THE CODE
+
+
+
+
+class Solution {
+  public:
+    string removePair(string s) {
+        string ans;
+        for(int i=0;i<s.size();i++) {
+            if(ans.empty()) ans.push_back(s[i]);
+            else if(!ans.empty() && ans.back() == s[i]) 
+                ans.pop_back();
+            else ans.push_back(s[i]);
+        }
+        if(ans.empty())
+        return "-1";
+        else return ans;
+    }
+};
+
+
+
+
+
+BY KUSHAL347
