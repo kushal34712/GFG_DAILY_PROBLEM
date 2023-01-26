@@ -1,0 +1,55 @@
+25 january 2023
+
+
+COPY THE CODE FROM THE 14TH LINE 
+
+
+Today remove the code from 7 to 14
+
+then ENTER AND PASTE THE CODE
+
+
+
+
+class Solution
+{
+    public:
+    //Function to perform case-specific sorting of strings.
+    string caseSort(string str, int n) {
+    // Create two vector for lowercase and uppercase letters
+    vector<char> lower;
+    vector<char> upper;
+
+    // Iterate through the string
+    for (int i = 0; i < n; i++) {
+        // Check if the current character is uppercase or lowercase
+        if (islower(str[i])) {
+            lower.push_back(str[i]);
+        } else {
+            upper.push_back(str[i]);
+        }
+    }
+
+    // Sort the two vectors
+    sort(lower.begin(), lower.end());
+    sort(upper.begin(), upper.end());
+    int l = 0, u = 0;
+    string res = "";
+    for(int i = 0; i < n; i++) {
+        if(islower(str[i])) {
+            res += lower[l];
+            l++;
+        }
+        else {
+            res += upper[u];
+            u++;
+        }
+    }
+    return res;
+}
+};
+
+
+
+
+BY KUSHAL347
