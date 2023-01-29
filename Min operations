@@ -1,0 +1,29 @@
+29 january 2023
+
+
+COPY THE CODE FROM THE 14TH LINE 
+
+
+Today remove the code from 7 to 13
+
+then ENTER AND PASTE THE CODE
+
+
+
+
+class Solution {
+  public:
+    int solve(int a, int b) {
+        if(a == b)
+        return 0;
+       else if((a&b)==min(a,b) )            return 1;
+        else
+        return 2;
+    }
+};
+
+
+
+
+
+BY KUSHAL347
