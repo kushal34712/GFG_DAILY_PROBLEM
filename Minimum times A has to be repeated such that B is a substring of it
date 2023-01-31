@@ -1,0 +1,40 @@
+31 january 2023
+
+
+COPY THE CODE FROM THE 14TH LINE 
+
+
+Today remove the code from 9 to 13
+
+then ENTER AND PASTE THE CODE
+
+
+
+
+class Solution {
+  public:
+    int minRepeats(string A, string B) {
+        string s = A;
+        int moves = 1;
+        while (A.size() < B.size()){
+            A += s;
+            moves++;
+        }
+        if (A.find(B) != -1){
+            return moves;
+        }
+        A += s;
+        moves++;
+        if (A.find(B) != -1){
+            return moves;
+        }
+        return -1;
+    }
+};
+
+
+
+
+
+
+BY KUSHAL347
