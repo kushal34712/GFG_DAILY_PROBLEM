@@ -13,23 +13,39 @@ then ENTER AND PASTE THE CODE
 
 class Solution{
     public:
-    pair<int,int> endPoints(vector<vector<int>> matrix){
-        vector<pair<int, int>> dir = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
-        int n = matrix.size(), m = matrix[0].size();
-        int i=0, j=0, k=0;
-        pair<int, int> ans;
-        while(i>=0 && j>=0 && i< n && j<m){
-            ans = {i, j};
-            if(matrix[i][j]==1){
+    pair<int,int> endPoints(vector<vector<int>> matrix, int R, int C){
+        //code here
+        pair<int,int>ans;
+        int i=0,j=0;
+        char temp='r';
+        while(i<matrix.size() and j<matrix[0].size() and i>=0 and j>=0){
+           ans={i,j};
+            if(matrix[i][j]==0){
+                if(temp=='r')j++;
+                else if(temp=='l')j--;
+                else if(temp=='u')i--;
+                else i++;
+            }else{
                 matrix[i][j]=0;
-                k = (k+1)%4; 
+                if(temp=='r'){
+                    i++;
+                    temp='d';
+                }else if(temp=='l'){
+                    temp='u';
+                    i--;
+                }else if(temp=='u'){
+                    j++;
+                    temp='r';
+                }else{
+                    j--;
+                    temp='l';
+                }
             }
-            i = i+dir[k].first;
-            j = j+dir[k].second;
         }
         return ans;
     }
 };
+
 
 
 
