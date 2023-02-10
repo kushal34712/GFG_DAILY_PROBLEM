@@ -1,12 +1,14 @@
 10 FEBUARY 2023
 
 
-COPY THE CODE FROM THE 14TH LINE 
+COPY THE CODE FROM THE 16TH LINE 
 
 
 Today remove the code from 11 to 16
 
 then ENTER AND PASTE THE CODE
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
 
 
 
@@ -20,6 +22,7 @@ public:
         return min({mp['b'], mp['a'], mp['l'] / 2, mp['o'] / 2, mp['n']});
     }
 };
+
 
 
 
