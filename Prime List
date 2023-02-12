@@ -1,0 +1,88 @@
+12 FEBUARY 2023
+
+COPY THE CODE FROM THE 18 TH LINE 
+
+Today remove the code from 35 to 40
+
+then ENTER AND PASTE THE CODE
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+
+class Solution{
+public:
+bool isPrime(int n)
+{
+    if(n==1)
+    {
+        return false;
+    }
+    
+    for(int i=2; i<=sqrt(n); i++)
+    {
+        if(n%i==0)
+        {
+            return false;
+        }
+    }
+    
+    return true;
+}
+    Node *primeList(Node *head){
+        
+        Node* temp=head;
+        while(temp!=NULL)
+        {
+            int n=temp->val;
+            if(n==1)
+            {
+                temp->val=2;
+                temp=temp->next;
+                continue;
+            }
+            int prev=n;
+            int ahead=n;
+            while(!isPrime(prev))
+            {
+                prev--;
+            }
+            
+            while(!isPrime(ahead))
+            {
+                ahead++;
+            }
+            
+            int dis1=ahead-n;
+            int dis2=n-prev;
+            if(dis1<dis2)
+            {
+                temp->val=ahead;
+            }
+            else if(dis2<dis1)
+            {
+                temp->val=prev;
+            }
+            else
+            {
+                temp->val=prev;
+            }
+            temp=temp->next;
+            
+            
+        }
+        
+        return head;
+    }
+};
+
+
+
+
+
+BY KUSHAL347
