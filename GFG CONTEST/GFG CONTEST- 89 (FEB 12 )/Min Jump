@@ -1,0 +1,57 @@
+12 FEBUARY 2023
+
+
+COPY THE CODE FROM THE 24 TH LINE 
+
+
+Today remove the code from 11 to 15
+
+
+then ENTER AND PASTE THE CODE
+
+
+CONTEST OF THE WEEK LINK OF GREEKS FOR GREEKS
+
+
+https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-89/instructions
+
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+
+class Solution{
+    public:
+    
+    bool check(int val){
+        if(val%2==0 || val%3==0) return true;
+        return false;
+    }
+    int minJump(int n,vector<int> arr)
+    {
+        //code here
+        int cnt=1;
+        for(int i=0;i<arr.size();i++){
+            if(!check(arr[i])){
+                int count=1;
+                while(!check(arr[i])){
+                    i++;
+                    count++;
+                }
+                i--;
+                cnt=max(count,cnt);
+            }
+        }
+        
+        return cnt;
+    }
+};
+
+
+
+
+
+
+
+BY KUSHAL347
