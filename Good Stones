@@ -1,0 +1,40 @@
+16 FEBUARY 2023
+
+COPY THE CODE FROM THE 18 TH LINE 
+
+Today remove the code from 09 to 14
+
+then ENTER AND PASTE THE CODE
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+
+class Solution{
+public:
+    int solve(int idx,int n,vector<int> &arr,vector<int> &dp){
+        if(idx>=n or idx<0) return 1;
+        if(dp[idx]!=-1) return dp[idx];
+        dp[idx]=0;
+        return dp[idx]=solve(idx+arr[idx],n,arr,dp);
+    }
+    int goodStones(int n,vector<int> &arr){
+        vector<int> dp(n,-1);
+        for(int i=0;i<n;i++){
+            solve(i,n,arr,dp);
+        }
+        return accumulate(dp.begin(),dp.end(),0);
+    } 
+};
+
+
+
+
+
+
+BY KUSHAL347
