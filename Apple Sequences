@@ -1,0 +1,43 @@
+18 FEBUARY 2023
+
+COPY THE CODE FROM THE 18 TH LINE 
+
+Today remove the code from 10 to 15
+
+then ENTER AND PASTE THE CODE
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+
+class Solution{ 
+public: 
+int appleSequences(int n, int m, string arr){ // code here
+ int o_cnt=0;
+ int i=0; 
+int j=0;
+ int max_len=0; while(j<n){ 
+if(arr[j]=='O') 
+o_cnt++; 
+while( o_cnt > m ){ 
+if(arr[i]=='O')
+ o_cnt--; 
+i++; 
+} max_len=max(j-i+1,max_len);
+ j++;
+ }
+ return max_len;
+ } 
+};
+
+
+
+
+
+
+BY KUSHAL347
