@@ -1,0 +1,44 @@
+18 FEBUARY 2023
+
+COPY THE CODE FROM THE 18 TH LINE 
+
+Today remove the code from 102 to 107
+
+then ENTER AND PASTE THE CODE
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+
+class Solution {
+  public:
+    Node *prev = NULL, *first = NULL, *second;
+    void fix (Node *root) {
+        if (root == NULL) return;
+        fix (root->left);
+        if (prev != NULL && root->data < prev->data) {
+            if (first == NULL)
+                first = prev;
+            second = root;
+        }
+        prev = root;
+        fix (root->right);
+    }
+   
+    struct Node *correctBST(struct Node *root) {
+        fix (root);
+        swap (first->data, second->data);
+        return root;
+    }
+};
+
+
+
+
+
+BY KUSHAL347
