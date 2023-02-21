@@ -1,0 +1,31 @@
+21 FEBUARY 2023
+
+COPY THE CODE FROM THE 18 TH LINE 
+
+Today remove the code from 10 to 15
+
+then ENTER AND PASTE THE CODE
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+
+class Solution{   
+public:
+    int minIteration(int N, int M, int x, int y){
+        return max(max(x-1+y-1,x-1+M-y),max(N-x+y-1,N-x+M-y));
+    }
+};
+
+
+
+
+
+
+
+BY KUSHAL347
