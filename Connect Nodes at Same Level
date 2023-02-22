@@ -1,0 +1,52 @@
+22 FEBUARY 2023
+
+COPY THE CODE FROM THE 18 TH LINE 
+
+Today remove the code from 136 to 142
+
+then ENTER AND PASTE THE CODE
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+
+class Solution{
+    public:
+  void connect(Node* root) {
+    if (root == nullptr) {
+        return;
+    }
+    queue<Node*> q;
+    q.push(root);
+    while (!q.empty()) {
+        int levelSize = q.size();
+        Node* prev = nullptr;
+        for (int i = 0; i < levelSize; i++) {
+            Node* curr = q.front();
+            q.pop();
+            if (prev != nullptr) {
+                prev->nextRight = curr;
+            }
+            prev = curr;
+            if (curr->left != nullptr) {
+                q.push(curr->left);
+            }
+            if (curr->right != nullptr) {
+                q.push(curr->right);
+            }
+        }
+    }
+}
+};
+
+
+
+
+
+
+BY KUSHAL347
