@@ -1,0 +1,60 @@
+26 FEBUARY 2023
+
+
+COPY THE CODE FROM THE 29 TH LINE 
+
+
+Today remove the code from 31 to 36
+
+
+then ENTER AND PASTE THE CODE
+
+
+CONTEST OF THE WEEK LINK OF GREEKD FOR GREEKS
+
+
+https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-90/problems/#
+
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+NOTE THE CODE IS IN THE JAVA
+
+
+
+
+
+class Solution {
+    static int totalRooms(int n, int m, int k ) {
+    // code here
+    int count=0;
+    if(n/(k+0.0)==n/k)
+    {
+        count+=n/k;
+    }
+    else
+    {
+        count+=n/k+1;
+    }
+    if(m/(k+0.0)==m/k)
+    {
+        count+=m/k;
+    }
+    else
+    {
+        count+=m/k+1;
+    }
+    return count;
+    
+    
+  }
+}
+
+
+
+
+
+
+BY KUSHAL347
