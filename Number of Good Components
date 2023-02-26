@@ -1,0 +1,81 @@
+26 FEBUARY 2023
+
+COPY THE CODE FROM THE 18 TH LINE 
+
+Today remove the code from 11 to 16
+
+then ENTER AND PASTE THE CODE
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+
+class Solution {
+  public:
+   void dfs(int src,vector<vector<int>> &adj,vector<bool> &vis,int &count,int &edge)
+
+  {
+
+      vis[src]=1;
+
+      count++;
+
+      for(auto it:adj[src])
+
+      {
+
+          edge++;
+
+          if(!vis[it])
+
+            dfs(it,adj,vis,count,edge);
+
+      }
+
+  }
+
+    int findNumberOfGoodComponent(int V, vector<vector<int>>& adj) {
+
+        // code here
+
+        vector<bool> vis(V+1,0);
+
+        int count,edges,res=0;
+
+        for(int i=1;i<=V;i++)
+
+        {
+
+            if(!vis[i])
+
+         {
+
+            count=0,edges=0;
+
+            dfs(i,adj,vis,count,edges);
+
+            if(edges/2 == (count*(count-1)/2))
+
+                res++;
+
+            }
+
+        }
+
+        return res;
+
+    }
+};
+
+
+
+
+
+
+
+BY KUSHAL347
