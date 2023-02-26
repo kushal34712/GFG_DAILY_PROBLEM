@@ -1,0 +1,46 @@
+19 FEBUARY 2023
+
+
+COPY THE CODE FROM THE 31 TH LINE 
+
+
+Today remove the code from 14 to 20
+
+
+then ENTER AND PASTE THE CODE
+
+
+CONTEST OF THE WEEK LINK OF GREEKD FOR GREEKS
+
+
+https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-90/problems/#
+
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+NOTE THE CODE IS IN THE PYTHON 
+
+
+
+
+
+
+
+class Solution:
+    def countPairs(self, N, arr):
+        freq = [0] * 200
+        res = 0
+        for i in range(N):
+            temp = arr[i] % 200
+            res += freq[temp]
+            freq[temp] += 1
+        return res
+        
+        
+        
+        
+        
+        
+BY KUSHAL347        
