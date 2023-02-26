@@ -1,0 +1,52 @@
+26 FEBUARY 2023
+
+
+COPY THE CODE FROM THE 29 TH LINE 
+
+
+Today remove the code from 31 to 36
+
+
+then ENTER AND PASTE THE CODE
+
+
+CONTEST OF THE WEEK LINK OF GREEKD FOR GREEKS
+
+
+https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-90/problems/#
+
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+NOTE THE CODE IS IN THE PYTHON 
+
+
+
+
+
+class Solution:
+    def saveCivilians(self, n, m, grid):
+        for i in range(n):
+            for j in range(m):
+                if grid[i][j] == 'C':
+                    if not self.is_safe(i, j, n, m, grid):
+                        return False
+        return True
+    
+    def is_safe(self, i, j, n, m, grid):
+        for dx, dy in [(0, 1), (1, 0), (0, -1), (-1, 0)]:
+            x, y = i + dx, j + dy
+            if 0 <= x < n and 0 <= y < m:
+                if grid[x][y] == 'T':
+                    return False
+        return True
+
+
+
+
+
+
+
+BY KUSHAL347
