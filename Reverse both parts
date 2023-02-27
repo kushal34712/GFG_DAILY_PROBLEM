@@ -1,0 +1,78 @@
+27 FEBUARY 2023
+
+COPY THE CODE FROM THE 18 TH LINE 
+
+Today remove the code from 11 to 16
+
+then ENTER AND PASTE THE CODE
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+
+class Solution
+{
+public:
+   
+    Node *reverse(Node *head, int k)
+    {
+      int cont=0;
+
+        vector<int>v;
+
+        Node *kt=head;
+
+        Node *f=head;
+
+        while(kt)
+
+        {
+
+            v.push_back(kt->data);
+
+            kt=kt->next;
+
+        }
+
+        for(int i=k-1;i>=0;i--)
+
+        {
+
+            f->data=v[i];
+
+            f=f->next;
+
+        }
+
+        int j=v.size()-1;
+
+        while(f)
+
+        {
+
+            f->data=v[j--];
+
+            f=f->next;
+
+            
+
+        }
+
+       // cout<<v.size();
+
+        return head;
+    }
+};
+
+
+
+
+
+
+
+BY KUSHAL347
