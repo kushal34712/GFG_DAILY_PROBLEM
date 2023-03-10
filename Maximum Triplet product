@@ -1,0 +1,46 @@
+10 MARCH 2023
+
+
+COPY THE CODE FROM THE 26 TH LINE 
+
+
+Today remove the code from 55 to 60
+
+
+then ENTER AND PASTE THE CODE
+
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+
+
+
+class Solution {
+  public:
+    long long maxTripletProduct(long long arr[], int n)
+    {
+     sort(arr,arr+n);
+     
+     long long p1 = arr[0]*arr[1]*arr[n-1]; // two negative number 
+     
+     long long p2 = arr[n-1]*arr[n-2]*arr[n-3]; // all poisitive number
+     
+     return max(p1,p2);
+    }
+};
+
+
+
+
+
+
+
+BY KUSHAL347
