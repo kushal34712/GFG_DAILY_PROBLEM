@@ -1,0 +1,58 @@
+11 MARCH 2023
+
+
+COPY THE CODE FROM THE 26 TH LINE 
+
+
+Today remove the code from 08 to 13
+
+
+then ENTER AND PASTE THE CODE
+
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+
+
+
+class Solution {
+  public:
+    vector<int> solveQueries(int N, int num, vector<int> &A, vector<vector<int>> &Q) {
+        
+        unordered_map<int,int> map;
+        vector<int> freq(N);
+        
+        for(int i = N-1; i >= 0; i--) {
+            map[A[i]]++;
+            freq[i] = map[A[i]];
+        }
+        
+        vector<int> res;
+        for(auto &q: Q) {
+            int L = q[0], R = q[1], k = q[2], numOfIdx = 0;
+            
+            while(L <= R) {
+                if(freq[L] == k)numOfIdx++;
+                L++;
+            }
+            
+            res.push_back(numOfIdx);
+        }
+        
+        return res;
+    }
+};
+
+
+
+
+
+BY KUSHAL347
