@@ -1,0 +1,57 @@
+14 MARCH 2023
+
+
+COPY THE CODE FROM THE 26 TH LINE 
+
+
+Today remove the code from 09 to 15
+
+
+then ENTER AND PASTE THE CODE
+
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+
+
+
+class Solution{
+    public:
+        int dp[402][402];
+        
+        int helper(vector<int> &A, int start, int end){
+            if(start>end){
+                return 0;
+            }
+            if(dp[start][end]!=-1){
+                return dp[start][end];
+            }
+            int res=INT_MIN;
+            for(int burst=start;burst<=end;burst++){
+                int cost=A[burst]*A[start-1]*A[end+1]+helper(A,start,burst-1)+helper(A,burst+1,end);
+                res=max(res,cost);
+            }
+            return dp[start][end]=res;
+        }
+        
+        int maxCoins(int N, vector <int> &a){
+            memset(dp,-1,sizeof(dp));
+            a.insert(a.begin(),1);
+            a.push_back(1);
+            return helper(a,1,N);
+        }
+};
+
+
+
+
+
+BY KUSHAL347
