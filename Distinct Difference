@@ -1,0 +1,58 @@
+19 MARCH 2023
+
+
+COPY THE CODE FROM THE 26 TH LINE 
+
+
+Today remove the code from 09 to 15
+
+
+then ENTER AND PASTE THE CODE
+
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+
+
+
+class Solution {
+  public:
+   vector<int> getDistinctDifference(int N, vector<int> &A) {
+        unordered_map<int,int>mp1;
+        unordered_map<int,int>mp2;
+        vector<int>ans;
+        for(auto it:A)
+        {
+            mp1[it]++;
+        }
+        for(int i=0;i<N;i++)
+        {
+            mp1[A[i]]--;
+            if(mp1[A[i]]==0) mp1.erase(A[i]);
+            ans.push_back(mp2.size()-mp1.size());
+            mp2[A[i]]++;
+        }
+        return ans;
+    }
+};
+
+
+
+
+
+BY KUSHAL 347
+
+╭╮╱╱╭━┳╮╱╱╱╱╭━━━┳╮╱╭┳━━━╮
+┃┣┳┳┫━┫╰┳━╮╭┫╭━╮┃┃╱┃┃╭━╮┃
+┃━┫┃┣━┃┃┃╋╰┫╰┫╭╯┃╰━╯┣╯╭╯┃
+╰┻┻━┻━┻┻┻━━┻┳┫╰╮┣━━╮┃╱┃╭╯
+╱╱╱╱╱╱╱╱╱╱╱╱┃╰━╯┃╱╱┃┃╱┃┃
+
