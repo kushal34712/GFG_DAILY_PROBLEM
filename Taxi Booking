@@ -1,0 +1,44 @@
+21 MARCH 2023
+
+
+COPY THE CODE FROM THE 26 TH LINE 
+
+
+Today remove the code from 11 to 15
+
+
+then ENTER AND PASTE THE CODE
+
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+
+
+
+
+class Solution{
+public:
+    int minimumTime(int N, int cur, vector<int> &pos, vector<int> &time){
+        int ans = INT_MAX;
+        
+        for(int i=0; i<N; i++)
+            ans = min(ans, abs(cur-pos[i]) * time[i]);
+            
+        return ans;
+    }
+};
+
+
+
+
+
+
+
+BY KUSHAL347
