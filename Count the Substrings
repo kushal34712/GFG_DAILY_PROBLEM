@@ -1,0 +1,57 @@
+27 MARCH 2023
+
+
+COPY THE CODE FROM THE 28 TH LINE 
+
+
+Today remove the code from 08 to 13
+
+
+then ENTER AND PASTE THE CODE
+
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+TOO LONG CODE COPY CARE FULLY 
+
+
+
+
+
+class Solution{
+    public:
+    int countSubstring(string S) {
+        unordered_map<int, int> map;
+        map[0] = 1;
+        int ans = 0;
+        int sum = 0;
+        for (char ch : S) {
+            int val;
+            if (isupper(ch)) {
+                val = 1;
+            }
+            else {
+                val = -1;
+            }
+            sum += val;
+            if (map.find(sum) != map.end()) {
+                ans += map[sum];
+            }
+            map[sum]++;
+        }
+        return ans;
+    }
+};
+
+
+
+
+
+BY KUSHAL347
