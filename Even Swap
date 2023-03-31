@@ -1,0 +1,55 @@
+31 MARCH 2023
+
+
+COPY THE CODE FROM THE 28 TH LINE 
+
+
+Today remove the code from 08 to 13
+
+
+then ENTER AND PASTE THE CODE
+
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+TOO LONG CODE COPY CARE FULLY 
+
+
+
+
+
+class Solution
+{
+    public:
+        vector <int> lexicographicallyLargest(vector <int> &arr,int n)
+        {
+            int pr=0;
+            int i;
+            for(i=1;i<n;i++)
+            {
+                if(arr[i]%2!=arr[i-1]%2)
+                {
+                    sort(arr.begin()+pr,arr.begin()+i,greater<int>());
+                    pr=i;
+                }
+                
+            }
+            sort(arr.begin()+pr,arr.begin()+i,greater<int>());
+            return arr;
+            // Code here
+        }
+};
+
+
+
+
+
+
+BY KUSHAL347
