@@ -1,0 +1,47 @@
+03 APRIL 2023
+
+
+COPY THE CODE FROM THE 28 TH LINE 
+
+
+Today remove the code from 11 to 16
+
+
+then ENTER AND PASTE THE CODE
+
+
+PROBLEM OF THE DAY LINK OF GREEKD FOR GREEKS
+
+
+https://practice.geeksforgeeks.org/problem-of-the-day
+
+
+WAIT FOR SOME TIME CODES TAKE TIME TO GET EXECUTE... SO BE PATIENCE
+
+
+TOO LONG CODE COPY CARE FULLY 
+
+
+
+
+
+class Solution
+{
+
+public:
+    int xmod11(string x)
+    {
+       // code here
+       int fs = 0, ss = 0;
+       for(int i = 0;i<x.size();i+=2)fs+=x[i] - '0';
+       for(int i = 1;i<x.size();i+=2)ss+=x[i] - '0';
+       return (ss-fs)%11 >= 0? (ss-fs)%11 : (ss-fs)%11 + 11;
+    
+    }
+};
+
+
+
+
+
+BY KUSHAL347
